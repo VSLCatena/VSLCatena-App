@@ -1,0 +1,17 @@
+import 'package:domain/di/di.dart' as domain;
+import 'package:data/di/di.dart' as data;
+import 'package:presentation/di/di.dart' as presentation;
+import 'package:get_it/get_it.dart';
+import 'package:injectable/injectable.dart';
+import 'package:vslcatena/di/di.config.dart';
+
+final getIt = GetIt.instance;
+
+@InjectableInit(
+    initializerName: 'init', preferRelativeImports: true, asExtension: true)
+void configureDependencies() {
+  domain.configureModuleDependencies(getIt);
+  data.configureModuleDependencies(getIt);
+  presentation.configureModuleDependencies(getIt);
+  getIt.init();
+}

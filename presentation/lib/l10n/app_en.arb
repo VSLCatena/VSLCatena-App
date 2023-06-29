@@ -1,0 +1,178 @@
+{
+  "appTitle": "V.S.L. Catena",
+  "@appTitle": {
+    "description": "The name of our beautiful app"
+  },
+  "onboardingLogin": "Login",
+  "@onboardingLogin": {
+    "description": "The login button"
+  },
+  "titleHome": "Home",
+  "@titleHome": {
+    "description": "The title of the home screen"
+  },
+  "titleAnnouncements": "News",
+  "@titleAnnouncements": {
+    "description": "The title of the announcements screen"
+  },
+  "titleMembers": "Members",
+  "@titleMembers": {
+    "description": "The title of the members screen"
+  },
+  "titlePromo": "Promo",
+  "@titlePromo": {
+    "description": "The title of the promotion screen"
+  },
+  "titleProfile": "Profile",
+  "@titleProfile": {
+      "description": "The title of the profile screen"
+  },
+  "titleSettings": "Settings",
+  "@titleSettings": {
+      "description": "The title of the settings screen"
+  },
+  "titleAbout": "About",
+  "@titleAbout": {
+      "description": "The title of the about screen"
+  },
+  "memberTabMembers": "Members",
+  "@memberTabMembers": {
+      "description": "The members tab on the members screen"
+  },
+  "memberTabCommittees": "Committees",
+  "@memberTabCommittees": {
+      "description": "The committees tab on the members screen"
+  },
+  "bottomBarHome": "Home",
+  "@bottomBarHome": {
+    "description": "The home button in the bottomBar"
+  },
+  "bottomBarNews": "News",
+  "@bottomBarNews": {
+    "description": "The news button in the bottomBar"
+  },
+  "bottomBarPromo": "Promo",
+  "@bottomBarPromo": {
+    "description": "The promo button in the bottomBar"
+  },
+  "bottomBarMembers": "Members",
+  "@bottomBarMembers": {
+    "description": "The members button in the bottomBar"
+  },
+  "drawerSettings": "Settings",
+  "@drawerSettings": {
+    "description": "The settings button in the drawer"
+  },
+  "drawerAbout": "About",
+  "@drawerAbout": {
+    "description": "The about button in the drawer"
+  },
+  "drawerLogout": "Logout",
+  "@drawerLogout": {
+    "description": "The logout button in the drawer"
+  },
+  "dateTimeSeparator": "at",
+  "@dateTimeSeparator": {
+      "description": "The separator between date and time"
+  },
+  "writtenBy": "By",
+  "@writtenBy": {
+      "description": "The text before the author of a post"
+  },
+  "dayMonday": "Monday",
+  "@dayMonday": {
+    "description": "Monday"
+  },
+  "dayTuesday": "Tuesday",
+  "@dayTuesday": {
+    "description": "Tuesday"
+  },
+  "dayWednesday": "Wednesday",
+  "@dayWednesday": {
+    "description": "Wednesday"
+  },
+  "dayThursday": "Thursday",
+  "@dayThursday": {
+    "description": "Thursday"
+  },
+  "dayFriday": "Friday",
+  "@dayFriday": {
+    "description": "Friday"
+  },
+  "daySaturday": "Saturday",
+  "@daySaturday": {
+    "description": "Saturday"
+  },
+  "daySunday": "Sunday",
+  "@daySunday": {
+    "description": "Sunday"
+  },
+  "monthJanuary": "January",
+  "@monthJanuary": {
+    "description": "January"
+  },
+  "monthFebruary": "February",
+  "@monthFebruary": {
+    "description": "February"
+  },
+  "monthMarch": "March",
+  "@monthMarch": {
+    "description": "March"
+  },
+  "monthApril": "April",
+  "@monthApril": {
+    "description": "April"
+  },
+  "monthMay": "May",
+  "@monthMay": {
+    "description": "May"
+  },
+  "monthJune": "June",
+  "@monthJune": {
+    "description": "June"
+  },
+  "monthJuly": "July",
+  "@monthJuly": {
+    "description": "July"
+  },
+  "monthAugust": "August",
+  "@monthAugust": {
+    "description": "August"
+  },
+  "monthSeptember": "September",
+  "@monthSeptember": {
+    "description": "September"
+  },
+  "monthOctober": "October",
+  "@monthOctober": {
+    "description": "October"
+  },
+  "monthNovember": "November",
+  "@monthNovember": {
+    "description": "November"
+  },
+  "monthDecember": "December",
+  "@monthDecember": {
+    "description": "December"
+  },
+  "settingsButtonDarkTheme": "Dark theme",
+  "@settingsButtonDarkTheme": {
+      "description": "The dark theme button in the settings screen"
+  },
+  "settingsButtonUseMaterialYou": "Use Material You",
+  "@settingsButtonUseMaterialYou": {
+      "description": "The use Material You button in the settings screen"
+  },
+  "textSeparator": "  •  ",
+  "@textSeparator": {
+      "description": "The divider between text"
+  },
+  "profileCommitteeTitle": "Committees:",
+  "@profileCommitteeTitle": {
+      "description": "The title of the committees section in the profile screen"
+  },
+  "committeeProfileMembersTitle": "Members:",
+  "@profileMemberTitle": {
+      "description": "The title of the members section in the committee profile screen"
+  }
+}

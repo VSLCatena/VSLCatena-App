@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>657394662159-gevo3sogainubg2deel29rhh8h6ifhdt.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.657394662159-gevo3sogainubg2deel29rhh8h6ifhdt</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>657394662159-4pndi8h1rka4g3ve5atidhno7ovun2v5.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBj7xn2eyuogGsK5e6cLi3AsQJzY-tCfQU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>657394662159</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>nl.vslcatena.app.vslcatena</string>
+	<key>PROJECT_ID</key>
+	<string>vsl-catena</string>
+	<key>STORAGE_BUCKET</key>
+	<string>vsl-catena.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:657394662159:ios:edadf89d46545ed9bd1c7a</string>
+	<key>DATABASE_URL</key>
+	<string>https://vsl-catena.firebaseio.com</string>
+</dict>
+</plist>
