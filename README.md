@@ -63,6 +63,11 @@ The blocs are the classes that define the business logic of the presentation lay
 ## Code style and conventions
 As I am not completely familiar with the development of Flutter apps, I might have missed some conventions. If you notice something that is not in line with the conventions, please let me know.
 
+### Merge requests
+For merge requests, the pipeline is holy. If the pipeline fails, the merge request will not be merged. If you want to merge a merge request, you should make sure that the pipeline succeeds. If you want to merge a merge request that fails the pipeline, you should fix the pipeline first.
+There is one exception to this rule:
+- The pipeline fails because of dependency vulnerabilities. Sometimes those dependencies have not yet been updated, and we can't do anything about it.
+
 ### Formatting
 We use the dart formatter to format our code. You can run it with:
 `dart format .`
