@@ -42,21 +42,17 @@ jobs:
 
 #      - run: flutter test
 
-      - name: Build APK and AAB
+      - name: Build Debug APK and AAB
         shell: bash
         run: |
           cd app
-          flutter build apk
-          flutter build appbundle
+          flutter build apk --debug
+          flutter build appbundle --debug
 
-      - name: Upload APK
+      - name: Upload APK and AAB
         uses: actions/upload-artifact@v2
         with:
           name: app-apk
-          path: app/build/app/outputs/flutter-apk/app-release.apk
-
-      - name: Upload AAB
-        uses: actions/upload-artifact@v2
-        with:
-          name: app-aab
-          path: app/build/app/outputs/bundle/release/app-release.aab
+          path: |
+            app/build/app/outputs/flutter-apk/app-debug.apk
+            app/build/app/outputs/bundle/debug/app-debug.aab
