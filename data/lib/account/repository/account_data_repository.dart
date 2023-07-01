@@ -24,7 +24,9 @@ class AccountDataRepository implements AccountRepository {
       _accountStore.currentUserStream.asyncMap(_mapMemberSnapshotToMember);
 
   @override
-  Future<void> login() async {}
+  Future<void> login() async {
+    return await _accountStore.signIn();
+  }
 
   @override
   Future<void> logout() async {
