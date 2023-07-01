@@ -30,4 +30,12 @@ jobs:
       - run: rps generate
 #      - run: flutter test
       - run: cd app && flutter build apk
-      - run: cd app &6 flutter build appbundle
+      - run: cd app && flutter build appbundle
+      - uses: actions/upload-artifact@v2
+        with:
+          name: app-apk
+          path: app/build/app/outputs/apk/debug/app-release.apk
+      - uses: actions/upload-artifact@v2
+        with:
+          name: app-aab
+          path: app/build/app/outputs/bundle/release/app-release.aab
