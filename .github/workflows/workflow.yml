@@ -29,5 +29,5 @@ jobs:
       - run: rps build
       - run: rps generate
 #      - run: flutter test
-      - run: flutter build apk
-      - run: flutter build appbundle
+      - run: cd app && flutter build apk
+      - run: cd app &6 flutter build appbundle
