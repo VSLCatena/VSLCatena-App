@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "657394662159-ov0letgqne0nsfdeph9aam7c9h9ipbuc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "nl.vslcatena.app",
+            "certificate_hash": "bc140bf9bd45e4ace57e9f4aa29ec0d7ba03e712"
+          }
+        },
+        {
           "client_id": "657394662159-vcppjcoign1u02n0j4cmla1h42rpqk95.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
