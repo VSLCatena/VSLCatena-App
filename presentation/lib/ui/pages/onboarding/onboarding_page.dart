@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:presentation/l10n/generated/app_localizations.dart';
+import 'package:presentation/ui/app/routes.dart';
 import 'package:presentation/ui/pages/onboarding/bloc/onboarding_bloc_factory.dart';
 import 'package:presentation/ui/pages/onboarding/model/onboarding_event.dart';
 import 'package:presentation/ui/pages/onboarding/model/onboarding_state.dart';
 import 'package:presentation/ui/pages/onboarding/bloc/onboarding_bloc.dart';
+import 'package:presentation/ui/utils/extension/context_extensions.dart';
 
 class OnboardingPage extends StatefulWidget {
   const OnboardingPage({super.key});
@@ -27,7 +29,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
           builder: _page,
           listener: (context, state) {
             if (state is OnboardingStateLoggedIn) {
-              Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
+              context.topNavigateTo(Destinations.home);
             } else if (state is OnboardingStateError) {
               ScaffoldMessenger.of(context)
                   .showSnackBar(SnackBar(content: Text(state.message)));

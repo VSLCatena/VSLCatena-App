@@ -69,10 +69,8 @@ class DefaultFirebaseOptions {
     projectId: 'vsl-catena',
     databaseURL: 'https://vsl-catena.firebaseio.com',
     storageBucket: 'vsl-catena.appspot.com',
-    androidClientId:
-        '657394662159-4pndi8h1rka4g3ve5atidhno7ovun2v5.apps.googleusercontent.com',
-    iosClientId:
-        '657394662159-gevo3sogainubg2deel29rhh8h6ifhdt.apps.googleusercontent.com',
+    androidClientId: '657394662159-4pndi8h1rka4g3ve5atidhno7ovun2v5.apps.googleusercontent.com',
+    iosClientId: '657394662159-gevo3sogainubg2deel29rhh8h6ifhdt.apps.googleusercontent.com',
     iosBundleId: 'nl.vslcatena.app.vslcatena',
   );
 
@@ -83,10 +81,8 @@ class DefaultFirebaseOptions {
     projectId: 'vsl-catena',
     databaseURL: 'https://vsl-catena.firebaseio.com',
     storageBucket: 'vsl-catena.appspot.com',
-    androidClientId:
-        '657394662159-4pndi8h1rka4g3ve5atidhno7ovun2v5.apps.googleusercontent.com',
-    iosClientId:
-        '657394662159-eppi8c7j0ddgf9k4e70r6h0oa5i2tll2.apps.googleusercontent.com',
+    androidClientId: '657394662159-4pndi8h1rka4g3ve5atidhno7ovun2v5.apps.googleusercontent.com',
+    iosClientId: '657394662159-eppi8c7j0ddgf9k4e70r6h0oa5i2tll2.apps.googleusercontent.com',
     iosBundleId: 'nl.vslcatena.app.vslcatena.RunnerTests',
   );
 }

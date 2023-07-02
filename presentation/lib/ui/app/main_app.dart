@@ -35,7 +35,7 @@ class MainApp extends StatelessWidget {
 
   Widget _app(BuildContext context, bool isLoggedIn, bool? isDarkTheme,
       bool useMaterialYou) {
-    final defaultRoute = isLoggedIn ? '/' : '/login';
+    final defaultRoute = isLoggedIn ? Destinations.home : Destinations.login;
     ThemeMode themeMode;
     switch (isDarkTheme) {
       case true:

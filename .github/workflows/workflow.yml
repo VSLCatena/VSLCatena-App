@@ -1,0 +1,65 @@
+name: Main workflow
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - 'release/**'
+      - develop
+  pull_request:
+    branches:
+      - main
+      - 'release/**'
+      - develop
+    types: [opened, synchronize, reopened]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v3
+
+      - name: Setup Java
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'zulu'
+          java-version: '11'
+
+      - name: Setup Dart
+        uses: dart-lang/setup-dart@v1
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2.10.0
+
+      - name: Setup and generate
+        shell: bash
+        run: |
+          flutter pub get
+          dart pub global activate rps
+          rps build
+          rps generate
+
+#      - run: flutter test
+
+      - name: Build Debug APK
+        shell: bash
+        run: |
+          cd app
+          flutter build apk --debug
+
+      - uses: r0adkll/sign-android-release@v1
+        name: Sign Debug APK
+        id: sign_app
+        with:
+          releaseDirectory: app/build/app/outputs/flutter-apk
+          signingKeyBase64: ${{ secrets.DEBUG_KEYSTORE_CERTIFICATE_B64 }}
+          alias: ${{ secrets.DEBUG_KEYSTORE_ALIAS }}
+          keyStorePassword: ${{ secrets.DEBUG_KEYSTORE_PASSWORD }}
+          keyPassword: ${{ secrets.DEBUG_KEYSTORE_PASSWORD }}
+
+      - name: Upload Debug APK
+        uses: actions/upload-artifact@v2
+        with:
+          name: Signed Debug App
+          path: ${{steps.sign_app.outputs.signedReleaseFile}}

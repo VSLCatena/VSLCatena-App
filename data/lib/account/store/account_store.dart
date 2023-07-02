@@ -44,7 +44,7 @@ class AccountStore {
     }
   }
 
-  Future<void> signin() async {
+  Future<void> signIn() async {
     final microsoftProvider = MicrosoftAuthProvider();
     microsoftProvider.setCustomParameters({
       'tenant': '2ea9aa7a-5a05-49cb-8307-63467188daa2',
