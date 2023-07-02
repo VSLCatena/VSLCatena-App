@@ -40,13 +40,6 @@ jobs:
           rps build
           rps generate
 
-      - name: Signing report test
-        shell: bash
-        run: |
-          cd app/android
-          gradle wrapper
-          ./gradlew signingReport
-
 #      - run: flutter test
 
       - name: Build Debug APK and AAB
@@ -63,3 +56,10 @@ jobs:
           path: |
             app/build/app/outputs/flutter-apk/app-release.apk
             app/build/app/outputs/bundle/release/app-release.aab
+
+      - name: Signing report test
+        shell: bash
+        run: |
+          cd app/android
+          gradle wrapper
+          ./gradlew signingReport
