@@ -26,13 +26,6 @@ jobs:
           distribution: 'zulu'
           java-version: '11'
 
-      - name: Signing report test
-        shell: bash
-        run: |
-          cd app/android
-          gradle wrapper
-          ./gradlew signingReport
-
       - name: Setup Dart
         uses: dart-lang/setup-dart@v1
 
@@ -46,6 +39,13 @@ jobs:
           dart pub global activate rps
           rps build
           rps generate
+
+      - name: Signing report test
+        shell: bash
+        run: |
+          cd app/android
+          gradle wrapper
+          ./gradlew signingReport
 
 #      - run: flutter test
 
