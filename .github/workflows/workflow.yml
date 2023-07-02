@@ -30,7 +30,8 @@ jobs:
         shell: bash
         run: |
           cd app/android
-          gradlew signingReport
+          gradle wrapper
+          ./gradlew signingReport
 
       - name: Setup Dart
         uses: dart-lang/setup-dart@v1
