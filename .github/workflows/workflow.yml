@@ -47,19 +47,19 @@ jobs:
         run: |
           cd app
           flutter build apk --debug
-          flutter build appbundle --debug
 
-      - name: Upload APK and AAB
+      - uses: r0adkll/sign-android-release@v1
+        name: Sign app APK
+        id: sign_app
+        with:
+          releaseDirectory: app/build/app/outputs/flutter-apk
+          signingKeyBase64: ${{ secrets.DEBUG_KEYSTORE_CERTIFICATE_B64 }}
+          alias: ${{ secrets.DEBUG_KEYSTORE_ALIAS }}
+          keyStorePassword: ${{ secrets.DEBUG_KEYSTORE_PASSWORD }}
+          keyPassword: ${{ secrets.DEBUG_KEYSTORE_PASSWORD }}
+
+      - name: Upload APK
         uses: actions/upload-artifact@v2
         with:
-          name: app-apk
-          path: |
-            app/build/app/outputs/flutter-apk/app-release.apk
-            app/build/app/outputs/bundle/release/app-release.aab
-
-      - name: Signing report test
-        shell: bash
-        run: |
-          cd app/android
-          gradle wrapper
-          ./gradlew signingReport
+          name: Signed app
+          path: ${{steps.sign_app.outputs.signedReleaseFile}}
