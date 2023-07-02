@@ -35,7 +35,7 @@ The data layer is the layer that is responsible for the retrieval and storage of
 The repositories are the implementations of the repositories defined by the domain layer. They are responsible for the retrieval and storage of data. They use the data sources to retrieve and store data.
 
 #### Data sources
-The data sources are the classes that define how the data is retrieved and stored. They are used by the repositories to retrieve and store data.
+The data sources are the classes that define how the data is retrieved and stored. This returns raw models, which should then be mapped to the domain models in the repositories through mappers. Both remote services (API endpoints) and local storage are data sources.
 
 #### Models
 The models are the objects that we receive from backend. These are raw objects that are not used by the rest of the app. They are used by the mappers to convert them to the models defined by the domain layer.
@@ -64,9 +64,7 @@ The blocs are the classes that define the business logic of the presentation lay
 As I am not completely familiar with the development of Flutter apps, I might have missed some conventions. If you notice something that is not in line with the conventions, please let me know.
 
 ### Merge requests
-For merge requests, the pipeline is holy. If the pipeline fails, the merge request will not be merged. If you want to merge a merge request, you should make sure that the pipeline succeeds. If you want to merge a merge request that fails the pipeline, you should fix the pipeline first.
-There is one exception to this rule:
-- The pipeline fails because of dependency vulnerabilities. Sometimes those dependencies have not yet been updated, and we can't do anything about it.
+For merge requests, the pipeline is holy. If the pipeline fails, the merge request will not be merged. Except if there is a good reason for it, which should then be discussed within the merge request.
 
 ### Formatting
 We use the dart formatter to format our code. You can run it with:
@@ -103,6 +101,15 @@ More tools for firebase, but then for flutter (FlutterFire cli):
 To remove a lot of the burdens, we use some scripts using rps:
 `dart pub global activate rps`
 
+### Other requirements
+You need to add your fingerprint to the firebase console. You can find the fingerprint by:
+- Logging in into firebase by running `firebase login`
+- Going to the folder of `app/android` and running `./gradlew signingReport`
+- Copying the SHA1 and SHA256 fingerprint
+- Going to the firebase console and adding both fingerprints to the app project settings
+- Running `flutterfire configure`, also in the `app/android` folder
+
+This should give you the ability to actually talk to firebase.
 
 ## Scripts
 We have a couple of scripts to make our lives easier. All these commands are both available in the root, and in the different modules. If a certain command takes a long time to run, you can go into the module and run the command there.

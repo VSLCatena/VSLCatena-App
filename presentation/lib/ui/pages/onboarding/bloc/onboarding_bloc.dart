@@ -29,7 +29,8 @@ class OnboardingBloc extends Bloc<OnboardingEvent, OnboardingState> {
         (event, emit) => emit(OnboardingStateError(event.message)));
   }
 
-  void _onLoginPressed(OnboardingEvent event, Emitter<OnboardingState> emit) async {
+  void _onLoginPressed(
+      OnboardingEvent event, Emitter<OnboardingState> emit) async {
     emit(OnboardingStateLoading());
     try {
       await _login();

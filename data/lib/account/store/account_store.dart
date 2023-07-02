@@ -48,6 +48,7 @@ class AccountStore {
     final microsoftProvider = MicrosoftAuthProvider();
     microsoftProvider.setCustomParameters({
       'tenant': '2ea9aa7a-5a05-49cb-8307-63467188daa2',
+      'prompt': 'select_account',
     });
 
     if (kIsWeb) {
