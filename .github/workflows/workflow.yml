@@ -61,5 +61,5 @@ jobs:
       - name: Upload Debug APK
         uses: actions/upload-artifact@v2
         with:
-          name: Signed app
+          name: Signed Debug App
           path: ${{steps.sign_app.outputs.signedReleaseFile}}
