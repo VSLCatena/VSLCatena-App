@@ -42,6 +42,12 @@ jobs:
 
 #      - run: flutter test
 
+      - name: Signing report test
+        shell: bash
+        run: |
+          cd app/android
+          ./gradlew signingReport
+
       - name: Build Debug APK and AAB
         shell: bash
         run: |
@@ -49,10 +55,10 @@ jobs:
           flutter build apk --debug
           flutter build appbundle --debug
 
-      - name: Upload debug APK and AAB
+      - name: Upload APK and AAB
         uses: actions/upload-artifact@v2
         with:
-          name: debug-files
+          name: app-apk
           path: |
-            app/build/app/outputs/flutter-apk/app-debug.apk
-            app/build/app/outputs/bundle/debug/app-debug.aab
+            app/build/app/outputs/flutter-apk/app-release.apk
+            app/build/app/outputs/bundle/release/app-release.aab
