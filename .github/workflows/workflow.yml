@@ -29,8 +29,7 @@ jobs:
       - name: Signing report test
         shell: bash
         run: |
-          cd app/android
-          .\gradlew signingReport
+          app/android/gradlew signingReport
 
       - name: Setup Dart
         uses: dart-lang/setup-dart@v1
