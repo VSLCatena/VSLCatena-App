@@ -42,14 +42,14 @@ jobs:
 
 #      - run: flutter test
 
-      - name: Build Debug APK and AAB
+      - name: Build Debug APK
         shell: bash
         run: |
           cd app
           flutter build apk --debug
 
       - uses: r0adkll/sign-android-release@v1
-        name: Sign app APK
+        name: Sign Debug APK
         id: sign_app
         with:
           releaseDirectory: app/build/app/outputs/flutter-apk
@@ -58,7 +58,7 @@ jobs:
           keyStorePassword: ${{ secrets.DEBUG_KEYSTORE_PASSWORD }}
           keyPassword: ${{ secrets.DEBUG_KEYSTORE_PASSWORD }}
 
-      - name: Upload APK
+      - name: Upload Debug APK
         uses: actions/upload-artifact@v2
         with:
           name: Signed app
