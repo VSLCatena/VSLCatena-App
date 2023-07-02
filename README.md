@@ -111,6 +111,10 @@ You need to add your fingerprint to the firebase console. You can find the finge
 
 This should give you the ability to actually talk to firebase.
 
+Temporarily (until we have written the cloud functions to do this for us), you need to add some data to the firestore database to make the app work:
+- Add yourself in the members collection, the id must be your microsoft account's uuid. Look at an other member to see what fields you need to add.
+- Check what your firebase's user uid is in firebase authentication, and add a document in the users collection with that uid. In there you need to add a field called `memberId` with the value of your microsoft account's uuid.
+
 ## Scripts
 We have a couple of scripts to make our lives easier. All these commands are both available in the root, and in the different modules. If a certain command takes a long time to run, you can go into the module and run the command there.
 ### Build
