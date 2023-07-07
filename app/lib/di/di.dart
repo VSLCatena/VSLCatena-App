@@ -1,6 +1,6 @@
-import 'package:domain/di/di.dart' as domain;
-import 'package:data/di/di.dart' as data;
-import 'package:presentation/di/di.dart' as presentation;
+import 'package:domain/di.dart' as domain;
+import 'package:data/di.dart' as data;
+import 'package:presentation/di.dart' as presentation;
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 import 'package:vslcatena/di/di.config.dart';
